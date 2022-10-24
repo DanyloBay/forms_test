@@ -1,0 +1,76 @@
+h1
+{
+    text-align: center;
+}
+
+textarea
+{
+    resize: none;
+}
+
+.form
+{
+    width: 600px;
+    outline: 2px solid rebeccapurple;
+    margin: 0 auto;
+    padding: 20px;
+}
+
+.form__field
+{
+    display: flex;
+    flex-direction: column;
+
+    margin-bottom: 20px;
+}
+
+.form__field label
+{
+    margin-bottom: 5px;
+}
+
+.form__field input
+{
+    padding: 10px 20px;
+}
+
+.form__field input::placeholder
+{
+    color: tomato;
+}
+
+.group
+{
+    margin-bottom: 15px;
+}
+
+.group__tittle
+{
+    margin-top: 0;
+    margin-bottom: 10px;
+}
+
+.topic__options, .experience__options
+{
+    padding: 0;
+    margin: 0;
+    list-style: none;
+}
+
+.topic__options li
+{
+    display: flex;
+    align-items: center;
+}
+
+.topic__options input[type="checkbox"]
+{
+    
+}
+
+.topic__options label
+{
+    font-size: 20px;
+    margin-left: 5px;
+}
+

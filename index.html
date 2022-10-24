@@ -4,70 +4,108 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <link rel="stylesheet" href="./style.css">
+
     <title>Forms</title>
 </head>
 <body>
 
-    <style>
-        textarea
-        {
-            resize: none;
-        }
-    </style>
-
     <h1>Заповни форму</h1>
 
-    <form name="form" class="js-speaker-form">
+    <form name="form" class="form js-speaker-form">
 
-        <label for="name">Ім'я</label>
-        <input type="text" name="name" id="name">
-        <br>
-        <label for="">Телефон</label>
-        <input type="tel" name="tel" id="tel">
-        <br>
-        <label for="email">Пошта</label>
-        <input type="email" name="email" id="email">
+        <div class="form__field">
+            <label for="name" class="form__lable">Ім'я</label>
+            <input 
+            type="text" 
+            name="name" 
+            id="name" 
+            autofocus 
+            placeholder="Danylo Bay">
+        </div>
+
+        <div class="form__field">
+            <label for="tel">Телефон</label>
+            <input type="tel" name="tel" id="tel">
+        </div>
+
+        <div class="form__field">
+            <label for="email">Пошта</label>
+            <input type="email" name="email" id="email">
+        </div>
 
         <p></p>
 
-        <div role="checkbox">
-            <input type="checkbox" name="type-1" value="html" id="html" checked>
-            <label for="html">Html</label>
-            <input type="checkbox" name="type-2" value="css" id="css">
-            <label for="css">Css</label>
-            <input type="checkbox" name="type-3" value="js" id="js">
-            <label for="js">JavaScript</label>
+        <div role="group" class="group">
+            <h2 class="group__tittle">Тема докладу</h2>
+            <ul class="topic__options">
+
+                <li>
+                    <input type="checkbox" name="type-1" value="html" id="html" checked>
+                    <label for="html">Html</label>
+                </li>
+
+                <li>
+                    <input type="checkbox" name="type-2" value="css" id="css">
+                    <label for="css">Css</label>
+                </li>
+
+                <li>
+                    <input type="checkbox" name="type-3" value="js" id="js">
+                    <label for="js">JavaScript</label>
+                </li>
+
+            </ul>
         </div>
 
-        <div role="radio">
-            <input type="radio" name="experience" value="junior" id="junior">
-            <label for="junior">Junior</label>
-            <input type="radio" name="experience" value="middle" id="middle">
-            <label for="middle">Middle</label>
-            <input type="radio" name="experience" value="senjor" id="senjor">
-            <label for="senjor">Senjor</label>
+        <div role="group" class="group">
+
+            <h2 class="group__tittle">Рівень вашого досвіду</h2>
+
+            <ul class="experience__options">
+                <li>
+                    <input type="radio" name="experience" value="junior" id="junior">
+                    <label for="junior">Junior</label>
+                </li>
+                <li>
+                    <input type="radio" name="experience" value="middle" id="middle">
+                    <label for="middle">Middle</label>
+                </li>
+                <li>
+                    <input type="radio" name="experience" value="senjor" id="senjor">
+                    <label for="senjor">Senjor</label>
+                </li>
+            </ul>
+
         </div>
 
         <br>
 
-        <label for="date">Дата заявки</label>
-        <input type="datetime-local" 
-        name="date" 
-        id="date"
-        min="2020-05-15T20:20"
-        max="2020-12-12T20:00"
-        >
+        <div class="form__field">
+            <label for="date">Дата заявки</label>
+            <input type="datetime-local" 
+            name="date" 
+            id="date"
+            min="2020-05-15T20:20"
+            max="2020-12-12T20:00"
+            >
+        </div>
 
-        <br>
+        <div class="form__field">
+            <label for="file">Завантажити форму</label>
+            <input type="file" name="file" id="file">
+        </div>
 
-        <label for="comment">Залишити відгук</label>
-        <textarea name="comment" id="comment" cols="10" rows="1"></textarea>
+        <div class="form__field">
+            <label for="comment">Залишити відгук</label>
+            <textarea name="comment" id="comment" cols="10" rows="1"></textarea>
+        </div>
 
-        <br>
-
-        <input type="checkbox" name="policy" id="policy">
-        <label for="policy">Даю згоду на відправку усіх моїх даних</label>
-
+        <div class="form__field">
+            <input type="checkbox" name="policy" id="policy">
+            <label for="policy">Даю згоду на відправку усіх моїх даних</label>
+        </div>
 
         <p></p>
         <button type="submit">Відправити форму</button>
